@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="pt-BR" data-type="software" data-radius="soft" data-buttons="arrow" data-motion="live">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#FAF7F0">
+  <meta name="page-type" content="software">
+  <meta name="site-kind" content="software">
+  <title>ChefControl — Gestão para quem vive de confeitaria</title>
+  <meta name="description" content="Organize receitas, calcule custos e acompanhe pedidos e estoque com o ChefControl. Baixe o aplicativo para Windows e trabalhe também sem internet.">
+  <meta property="og:title" content="ChefControl — Sua confeitaria sob controle">
+  <meta property="og:description" content="Do custo da receita à próxima entrega. Conheça o ChefControl, seu aplicativo de gestão local para Windows.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:image" content="assets/share.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Add an absolute canonical URL and og:image URL when a public domain is chosen. -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/gabarito-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/vendor/motion/motion.css">
+  <link rel="stylesheet" href="assets/vendor/moments/liquid-type/moment.css">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <!-- Brand palette; Gabarito/Figtree; collage hero; centre nav; word close; restrained motion. -->
+  <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></symbol>
+    <symbol id="i-chef" viewBox="0 0 24 24"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6ZM6 17h12"/></symbol>
+    <symbol id="i-recipe" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2ZM8 7h8M8 11h6"/></symbol>
+    <symbol id="i-orders" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="18" rx="2"/><rect x="9" y="2" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h6"/></symbol>
+    <symbol id="i-stock" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5ZM3 8v9l9 5 9-5V8M12 13v9M7.5 5.5l9 5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></symbol>
+  </svg>
+
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a class="skip-link" href="#top">Pular para o conteúdo</a>
+      <a class="brand nav__logo" href="#top" aria-label="ChefControl, início"><img src="assets/favicon.svg" width="34" height="34" alt=""><span>Chef<span class="brand__light">Control</span></span></a>
+      <nav class="nav__links" id="navigation" aria-label="Navegação do site">
+        <a href="#produto">O aplicativo</a>
+        <a href="#custos">Precificação</a>
+        <a href="#local">Uso offline</a>
+        <a href="#download">Download</a>
+      </nav>
+      <div class="nav__actions">
+        <a class="btn btn--primary nav__download" href="downloads/ChefControl-Setup-1.0.0-Windows-x64.exe" download><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Baixar para Windows</a>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="navigation" aria-expanded="false" hidden><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero hero--collage" data-enter aria-labelledby="hero-heading">
+      <div class="wrap hero__grid">
+        <div class="hero-text">
+        <div class="hero__copy">
+          <p class="eyebrow"><span class="eyebrow__line" aria-hidden="true"></span>Feito para a sua confeitaria</p>
+          <h1 id="hero-heading">Gestão para<br>quem vive de<br><span class="hero__last">confeitaria.</span></h1>
+          <p class="hero__lead">Saiba quanto custa cada receita, acompanhe encomendas e organize seus ingredientes. Tudo no seu computador, inclusive sem internet.</p>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="downloads/ChefControl-Setup-1.0.0-Windows-x64.exe" download><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Baixar para Windows</a>
+            <a class="btn btn--secondary" href="#produto">Ver o aplicativo</a>
+          </div>
+          <p class="hero__compatibility"><svg class="icon" aria-hidden="true"><use href="#i-monitor"/></svg>Windows 10 e 11 · 64 bits · v1.0.0</p>
+        </div>
+        <div class="hero-visual ly-collage" data-enter-media>
+          <div class="stage-lines" aria-hidden="true"></div>
+          <div class="hero__product">
+            <div class="window-bar" aria-hidden="true"><span class="window-dots"><i></i><i></i><i></i></span></div>
+            <img src="assets/product/dashboard.png" width="1440" height="820" alt="Painel real do ChefControl com pedidos em andamento, faturamento, alertas de estoque e próximas entregas. Valores de demonstração." fetchpriority="high" data-source="ChefControl" data-subject="Painel do aplicativo">
+          </div>
+          <div class="cost-note" aria-hidden="true">
+            <div class="cost-note__heading"><span class="note-icon"><svg class="icon"><use href="#i-recipe"/></svg></span><span>Cada grama conta.</span><svg class="icon note-check"><use href="#i-check"/></svg></div>
+            <div class="cost-note__body"><span>30 g de uma embalagem<br>de 100 g por R$ 10,00</span><strong>R$ 3<span>,00</span></strong></div>
+            <div class="cost-note__foot"><span>Custo da porção</span><span>Calculado na receita</span></div>
+          </div>
+          <span class="hero__corner" aria-hidden="true"><svg class="icon"><use href="#i-chef"/></svg></span>
+        </div>
+        </div>
+        <div class="hero__foot" aria-label="Recursos principais">
+          <span><svg class="icon" aria-hidden="true"><use href="#i-recipe"/></svg>Receitas com custo por porção</span>
+          <span><svg class="icon" aria-hidden="true"><use href="#i-orders"/></svg>Pedidos conectados ao estoque</span>
+          <span><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg>Dados no seu computador</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tour" id="produto" aria-labelledby="product-heading">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="product-heading">A rotina da confeitaria,<br>em um só lugar.</h2>
+          <p>Da compra dos ingredientes à encomenda pronta, acompanhe o que acontece na sua confeitaria.</p>
+        </div>
+        <div class="tour__toolbar">
+          <div class="tour__tabs" role="tablist" aria-label="Telas do ChefControl" hidden>
+            <button type="button" role="tab" id="tab-dashboard" aria-controls="panel-dashboard" aria-selected="true" tabindex="0" data-tab="dashboard">Painel</button>
+            <button type="button" role="tab" id="tab-orders" aria-controls="panel-orders" aria-selected="false" tabindex="-1" data-tab="orders">Pedidos</button>
+            <button type="button" role="tab" id="tab-recipes" aria-controls="panel-recipes" aria-selected="false" tabindex="-1" data-tab="recipes">Receitas</button>
+            <button type="button" role="tab" id="tab-inventory" aria-controls="panel-inventory" aria-selected="false" tabindex="-1" data-tab="inventory">Estoque</button>
+          </div>
+          <span class="tour__hint" id="tour-description">O que precisa da sua atenção, à primeira vista.</span>
+        </div>
+        <div class="app-frame">
+          <div class="window-bar" aria-hidden="true"><span class="window-dots"><i></i><i></i><i></i></span></div>
+          <div class="tour-panel" id="panel-dashboard" role="tabpanel" aria-labelledby="tab-dashboard" tabindex="0"><img src="assets/product/dashboard.png" width="1440" height="820" loading="lazy" alt="Tela do painel: resumo de pedidos, faturamento e próximas entregas com dados de demonstração." data-source="ChefControl" data-subject="Dashboard"></div>
+          <div class="tour-panel" id="panel-orders" role="tabpanel" aria-labelledby="tab-orders" tabindex="0" hidden><img src="assets/product/orders.png" width="1440" height="820" loading="lazy" alt="Tela de pedidos do ChefControl: encomendas organizadas por etapa de produção." data-source="ChefControl" data-subject="Pedidos"></div>
+          <div class="tour-panel" id="panel-recipes" role="tabpanel" aria-labelledby="tab-recipes" tabindex="0" hidden><img src="assets/product/recipes.png" width="1440" height="820" loading="lazy" alt="Tela de produtos do ChefControl: receitas com custos calculados e preços de venda." data-source="ChefControl" data-subject="Receitas"></div>
+          <div class="tour-panel" id="panel-inventory" role="tabpanel" aria-labelledby="tab-inventory" tabindex="0" hidden><img src="assets/product/inventory.png" width="1440" height="820" loading="lazy" alt="Tela de insumos do ChefControl: quantidades, custo e alertas de estoque." data-source="ChefControl" data-subject="Estoque"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pricing" id="custos" aria-labelledby="cost-heading">
+      <div class="wrap pricing__grid">
+        <div class="pricing__text">
+          <p class="eyebrow"><span class="eyebrow__line" aria-hidden="true"></span>Uma receita, todos os números</p>
+          <h2 id="cost-heading">O preço começa<br>na receita.</h2>
+          <p>Você compra a embalagem inteira. A receita usa uma parte. O ChefControl calcula o custo da quantidade utilizada e sugere um preço a partir do ganho que você define.</p>
+          <div class="pricing__detail"><p>Gramas, quilos, mililitros, litros ou unidades. As medidas entram na mesma conta.</p></div>
+          <p class="pricing__aside">A sugestão considera os ingredientes. Você ajusta o preço final para cobrir as demais despesas do seu negócio.</p>
+        </div>
+        <div class="calculator" aria-labelledby="calculator-heading">
+          <div class="calculator__head"><h3 id="calculator-heading">Experimente o cálculo</h3><svg class="icon" aria-hidden="true"><use href="#i-recipe"/></svg></div>
+          <div class="ingredient"><div class="ingredient__mark" aria-hidden="true"><svg class="icon"><use href="#i-stock"/></svg></div><div><strong>Chocolate em pó</strong><span>Embalagem de 100 g</span></div><span class="ingredient__price">R$ 10,00</span></div>
+          <div class="portion-label"><label for="portion">Porção utilizada</label><output id="portion-value" for="portion">30 g</output></div>
+          <input id="portion" type="range" min="10" max="100" step="5" value="30" aria-describedby="portion-help">
+          <div class="range-labels" aria-hidden="true"><span>10 g</span><span>100 g</span></div>
+          <p id="portion-help" class="sr-only">Altere a quantidade de chocolate utilizada na receita para simular o custo proporcional.</p>
+          <div class="calculator__cost"><span>Custo dos ingredientes</span><output id="ingredient-cost" for="portion">R$ 3,00</output></div>
+          <div class="markup-row"><label for="markup">Ganho sobre o custo</label><div class="select-wrap"><select id="markup"><option value="0">0%</option><option value="50">50%</option><option value="100">100%</option><option value="150" selected>150%</option><option value="200">200%</option></select><svg class="select-chevron" viewBox="0 0 20 20" aria-hidden="true"><path d="m6 8 4 4 4-4"/></svg></div></div>
+          <div class="calculator__result"><div><span>Sugestão de preço</span><small>Custo + ganho definido</small></div><output id="suggested-price" for="portion markup">R$ 7,50</output></div>
+          <p class="calculator__note">Simulação com um ingrediente. No aplicativo, o cálculo reúne todos os ingredientes da receita.</p>
+          <p class="sr-only" id="calculation-status" role="status"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section local" id="local" aria-labelledby="local-heading">
+      <div class="wrap local__grid">
+        <div class="local__intro">
+          <h2 id="local-heading">Sua confeitaria.<br>Seus dados.</h2>
+          <p>O ChefControl funciona no seu computador. Pedidos, receitas e estoque continuam disponíveis quando a internet não está.</p>
+          <div class="local-visual" role="img" aria-label="Pedidos, receitas e estoque guardados na pasta de dados do ChefControl, no seu computador.">
+            <div class="folder__tab"></div>
+            <div class="folder">
+              <div class="folder__title"><svg class="icon" aria-hidden="true"><use href="#i-monitor"/></svg><span>Minha confeitaria</span><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></div>
+              <div class="folder__row"><svg class="icon" aria-hidden="true"><use href="#i-orders"/></svg>Meus pedidos<span>No computador</span></div>
+              <div class="folder__row"><svg class="icon" aria-hidden="true"><use href="#i-recipe"/></svg>Minhas receitas<span>No computador</span></div>
+              <div class="folder__row"><svg class="icon" aria-hidden="true"><use href="#i-stock"/></svg>Meu estoque<span>No computador</span></div>
+            </div>
+          </div>
+        </div>
+        <dl class="faq" aria-label="Dúvidas sobre o ChefControl">
+          <div class="faq__item"><dt>Preciso criar uma conta?</dt><dd><p>Você configura seu perfil no primeiro uso e já pode começar. O aplicativo abre direto no painel nas próximas vezes.</p></dd></div>
+          <div class="faq__item"><dt>Funciona sem internet?</dt><dd><p>Sim. Depois de baixar e instalar, o ChefControl funciona offline, com os componentes necessários incluídos no instalador.</p></dd></div>
+          <div class="faq__item"><dt>Como faço uma cópia dos dados?</dt><dd><p>Feche o aplicativo e copie a pasta de dados do ChefControl para outro local seguro. O guia de instalação explica onde encontrá-la.</p></dd></div>
+          <div class="faq__item"><dt>Posso usar no Mac ou no celular?</dt><dd><p>Esta versão é para Windows 10 e 11 de 64 bits. O aplicativo guarda os dados localmente e não sincroniza entre dispositivos.</p></dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="closing" id="download" aria-labelledby="download-heading">
+    <div class="wrap">
+      <div class="closing__cta">
+        <div class="download__top">
+          <div><p class="eyebrow"><span class="eyebrow__line" aria-hidden="true"></span>Da próxima receita em diante</p><h2 id="download-heading">Abra espaço<br>para a sua confeitaria.</h2></div>
+          <div class="download__action"><a class="btn btn--primary" href="downloads/ChefControl-Setup-1.0.0-Windows-x64.exe" download><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Baixar para Windows</a><p>Versão 1.0.0 <span aria-hidden="true">·</span> 303 MB <span aria-hidden="true">·</span> 64 bits</p><a class="link checksum-link" href="downloads/ChefControl-Setup-1.0.0-Windows-x64.exe.sha256" download>Baixar verificação SHA-256</a></div>
+        </div>
+        <div class="install-info"><span><svg class="icon" aria-hidden="true"><use href="#i-monitor"/></svg>Windows 10 (1809+) ou Windows 11 · .NET Framework 4.7.2+</span><details><summary>Como instalar e guardar seus dados <svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><div><p>Abra o arquivo baixado e siga o assistente em português. Na primeira abertura, configure seu perfil. Você não precisa instalar Node.js ou Python.</p><p>O instalador ainda não possui certificado digital; o Windows pode exibir um aviso de editor desconhecido. Uma instalação nova começa com os cadastros vazios.</p><p>Para backup, feche o ChefControl e copie a pasta <code>%LOCALAPPDATA%\ChefControl</code>, que contém o banco e o perfil. Guarde a cópia em outro local seguro.</p></div></details></div>
+        <div class="closing__wordmark mo-lt__type" data-moment="liquid-type" data-moment-opts='{"strength":0.3,"radius":0.2}'>ChefControl</div>
+      </div>
+      <div class="closing__links"><span>© 2026 ChefControl</span><span>Gestão local para confeitarias.</span><a href="#top">Voltar ao início</a></div>
+    </div>
+  </footer>
+  <noscript><style>.tour__tabs[hidden]{display:none}.menu-toggle{display:none}.calculator input,.calculator select{pointer-events:none}@media(max-width:1023px){.nav__links{display:none!important}}</style><p class="noscript-notice">Ative o JavaScript para experimentar o cálculo e trocar as telas. O download funciona normalmente.</p></noscript>
+  <script type="module" src="assets/vendor/motion/motion.js"></script>
+  <script type="module" src="assets/vendor/moments/moments.js"></script>
+</body>
+</html>

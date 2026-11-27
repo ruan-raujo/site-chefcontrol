@@ -1,0 +1,5 @@
+node_modules/
+downloads/*.exe
+.taste-skill/
+qa/
+dist/
