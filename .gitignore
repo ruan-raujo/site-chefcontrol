@@ -3,3 +3,4 @@ downloads/*.exe
 .taste-skill/
 qa/
 dist/
+.vercel/

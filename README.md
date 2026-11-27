@@ -21,10 +21,23 @@ Acesse `http://localhost:4173`.
 npm.cmd run build
 ```
 
-Publique o conteúdo de `dist`. A pasta inclui o instalador de aproximadamente
-303 MB. O serviço de hospedagem deve aceitar esse tamanho de arquivo e, de
-preferência, requisições HTTP Range. Antes de publicar, configure o domínio
-canônico e uma URL absoluta para `og:image` em `index.html`.
+Na Vercel, importe o repositório `ruan-raujo/site-chefcontrol`. O arquivo
+`vercel.json` configura o framework como Other, o comando `npm run build` e a
+pasta de saída `dist`. O build funciona em um checkout limpo, sem o instalador.
+
+O instalador de 303 MB fica como um asset da Release `chefcontrol-v1.0.0` no
+mesmo repositório. A rota `/downloads/ChefControl-Setup-1.0.0-Windows-x64.exe`
+redireciona diretamente para esse arquivo no GitHub. A Vercel entrega apenas o
+site, sem processar ou transferir o executável. Os botões continuam funcionando
+sem JavaScript. O checksum `.sha256` continua hospedado com o site.
+
+Antes de publicar uma nova versão, envie o `.exe` para a Release e confira seu
+SHA-256. Depois atualize o destino em `vercel.json`, os links, a versão e o
+tamanho em `index.html`. Para outra hospedagem estática, configure um
+redirecionamento equivalente ou inclua o instalador local em `dist`.
+
+Ao definir o domínio público, configure o canônico e uma URL absoluta para
+`og:image` em `index.html`.
 
 O instalador em `downloads` é uma cópia de
 `../ChefControl/dist/ChefControl-Setup-1.0.0-Windows-x64.exe`. Os arquivos `.exe`
@@ -34,10 +47,13 @@ e `dist` são ignorados pelo Git. Para repor o instalador em outra máquina:
 Copy-Item ../ChefControl/dist/ChefControl-Setup-1.0.0-Windows-x64.exe downloads/
 ```
 
-Ao atualizar a versão do aplicativo, atualize também os links em `index.html`,
-o tamanho, a versão e o arquivo `.sha256`. O build falha se o instalador não existir.
-O servidor local entrega o instalador por streaming, com download parcial e
-retomada por HTTP Range; não carrega os 303 MB na memória.
+O build local inclui o instalador quando o arquivo existe; sua ausência não
+impede o build. Na Vercel (`VERCEL=1`), o instalador é sempre excluído de `dist`.
+O build substitui a pasta gerada para evitar executáveis antigos em cache.
+O servidor local entrega o instalador por streaming e aceita HTTP Range.
+
+Execute `npm.cmd run test:build` para verificar o build sem instalador,
+o redirecionamento e a exclusão de arquivos locais ou antigos na Vercel.
 
 ## Design e verificação
 

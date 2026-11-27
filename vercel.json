@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "redirects": [
+    {
+      "source": "/downloads/ChefControl-Setup-1.0.0-Windows-x64.exe",
+      "destination": "https://github.com/ruan-raujo/site-chefcontrol/releases/download/chefcontrol-v1.0.0/ChefControl-Setup-1.0.0-Windows-x64.exe",
+      "permanent": false
+    }
+  ]
+}

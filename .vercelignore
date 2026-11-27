@@ -1,0 +1,6 @@
+.git/
+.taste-skill/
+qa/
+dist/
+node_modules/
+downloads/*.exe
